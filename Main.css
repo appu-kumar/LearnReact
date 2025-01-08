@@ -1,0 +1,20 @@
+
+.res{
+    width:max-content;
+    border: 2px solid black;
+    padding:10px;
+    margin:5px;
+}
+
+.restaurants{
+    display:flex;
+    justify-content: space-between;
+    /* flex-wrap:wrap; */
+}
+
+#search {
+    border:1px solid black;
+    width:max-content;
+    padding:2px;
+    cursor: pointer;
+}
