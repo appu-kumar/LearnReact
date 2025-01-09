@@ -15,4 +15,8 @@
 - npm init to make project npm understandable
 - npm install -D parcel (It is development package ) Parcel is a web application bundler that can be used to build React applications:
 
+# We use two approach in react to render UI   Second approach is best approach 
+- Loads --> API ----> Render
+- Loads -->Render(UI) --->API ---->Render (useEffect,  after rendering the component it calls a method)
+
 

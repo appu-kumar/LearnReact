@@ -1,10 +1,12 @@
 
-
+import {useState} from 'react'
 
 const Header = () =>{
+
+   const [btnLogin, setBtnLogin] = useState('Login')
     return (
         <>
-          <h1>Header</h1>
+          <button onClick={()=>btnLogin === 'Login'?setBtnLogin('Logout'):setBtnLogin('Login')}>{btnLogin}</button>
         </>
     )
 }
