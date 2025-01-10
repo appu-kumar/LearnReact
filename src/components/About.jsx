@@ -1,7 +1,20 @@
+import UserClass from './UserClass'
+import User from './User';
+import { useEffect } from 'react';
 const About = () => {
+    
+   
+    useEffect(()=>{
+      console.log('it is didMount function in class component')
+      // this is used to call an api
+    },[])
+
+    console.log('render parent')
     return (
       <>
         <h1>About</h1>
+        <UserClass title={"class wala hai ye ok"} />
+        <User    title={"function wala hai ye ok"}/>
         <p>
           Appu Kumar
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores

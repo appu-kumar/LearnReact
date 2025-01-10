@@ -9,7 +9,8 @@
 .restaurants{
     display:flex;
     justify-content: space-between;
-    /* flex-wrap:wrap; */
+    gap:10px;
+    flex-wrap:wrap;
 }
 
 #search {
@@ -39,4 +40,10 @@
 .header .links ul li a {
     text-decoration: none; /* Optional: Removes underline from links */
     color: inherit; /* Optional: Inherit parent color for links */
+}
+
+
+.user {
+    border:1px solid blue;
+    margin:5px;
 }

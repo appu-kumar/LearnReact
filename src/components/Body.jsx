@@ -1,7 +1,8 @@
 import { restaurants } from "../utils/constants";
-import RestaurantDetails from "./Restaurants";
+import RestaurantDetails from "./RestaurantDetails";
 import { useState, useEffect } from "react";
 import { ratings } from "../utils/constants";
+import { Link } from "react-router";
 const Body = () => {
   // these are the state variables that syncs ui and data
   const [resList, setResList] = useState(restaurants);
@@ -76,7 +77,7 @@ const Body = () => {
 
       <div className="restaurants">
         {resList.map((res, idx) => (
-          <RestaurantDetails key={idx} res={res} />
+          <Link to={`/restaurant/${idx}`} key={idx}><RestaurantDetails  res={res} /> </Link>
         ))}
       </div>
     </>

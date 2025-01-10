@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 import Contact from "./components/Contact";
 import Project from "./components/Project";
 import Error from "./components/Error";
+import Restaurant from "./components/Restaurant";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
 const App = () => {
@@ -28,6 +29,7 @@ const AppRouter = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/project" element={<Project />} />
+          <Route path="/restaurant/:resId" element={<Restaurant />} />      {/* dynamic routing     */}
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

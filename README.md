@@ -19,4 +19,7 @@
 - Loads --> API ----> Render
 - Loads -->Render(UI) --->API ---->Render (useEffect,  after rendering the component it calls a method)
 
+# React Life cylce method diagram
+- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
 
