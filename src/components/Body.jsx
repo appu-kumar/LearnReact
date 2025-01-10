@@ -9,21 +9,29 @@ const Body = () => {
   const [todos, setTodos] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  useEffect(() => {
-    // it runs once when ui rendered
-    async function fetchData() {
-      const res = await fetch("https://jsonplaceholder.typicode.com/todos");
-      const data = await res.json();
-      setTodos(data);
-      console.log("inside function", data);
-    }
-    fetchData();
-  }, []);
 
-  if (todos.length === 0) {
-    return <p>Loading....</p>; // use skelton instead of this ok
-  }
+  // No depedency array---> It(compoenent) will be called EVERY time when any state variable change
+  // []  -----------------> It will be called only ONCE after when this component called(first time rendered) 
+  // [searchText] --------> It will be called (second point) and when searchText will get updation
+  // useEffect(() => {
+  //   // it runs once when ui rendered
+  //   console.log('after rendering')
+  //   async function fetchData() {
+  //     const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  //     const data = await res.json();
+  //     setTodos(data);
+  //   }
+  //   fetchData();
+   
+  // },[]);
 
+
+  // console.log('rednered comp')
+  // if (todos.length === 0) {
+  //   return <p>Loading....</p>; // use skelton instead of this ok
+  // }
+
+  
   return (
     <>
       <div
