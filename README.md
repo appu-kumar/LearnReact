@@ -22,4 +22,9 @@
 # React Life cylce method diagram
 - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
+# custom hook
+- Custom hook is simple js function ok, in custom hook we use inbuilt hook and segregate from the compoenent logic see useOnlineStatus hook
+- It follows single responsiblity principle
+- Increase Readablity, testability, maintainability etc. 
+
 

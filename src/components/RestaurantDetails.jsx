@@ -1,3 +1,6 @@
+
+
+
 const RestaurantDetails = (props) => {
   const {res} = props;
   const { image, name, rating, rate, description, deliveryTime } = res;

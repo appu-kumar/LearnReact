@@ -8,6 +8,16 @@ import Project from "./components/Project";
 import Error from "./components/Error";
 import Restaurant from "./components/Restaurant";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import {lazy,Suspense} from 'react'
+
+// lazy loading
+// dynamic bundling
+// code spliting
+// chunking 
+// all are same ok
+// bundler will make different js file for this compoenent ok
+const Grocery = lazy(() => import("./components/Grocery"));   // if grocery is big componenet then do this thing
+
 
 const App = () => {
   return (
@@ -30,6 +40,7 @@ const AppRouter = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/project" element={<Project />} />
           <Route path="/restaurant/:resId" element={<Restaurant />} />      {/* dynamic routing     */}
+          <Route path="/grocery" element={<Suspense fallback={<p>Loading....</p>}><Grocery /></Suspense>}></Route>
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

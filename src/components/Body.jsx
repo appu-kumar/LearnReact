@@ -23,6 +23,14 @@ const Body = () => {
   //     setTodos(data);
   //   }
   //   fetchData();
+
+      //const timer = setTimeout(()=>{},3000);
+
+
+      // for unmounting phase 
+      // return () => {
+      //   clearInterval(timer);
+      // }
    
   // },[]);
 
