@@ -10,9 +10,8 @@ const Body = () => {
   const [todos, setTodos] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-
   // No depedency array---> It(compoenent) will be called EVERY time when any state variable change
-  // []  -----------------> It will be called only ONCE after when this component called(first time rendered) 
+  // []  -----------------> It will be called only ONCE after when this component called(first time rendered)
   // [searchText] --------> It will be called (second point) and when searchText will get updation
   // useEffect(() => {
   //   // it runs once when ui rendered
@@ -24,68 +23,72 @@ const Body = () => {
   //   }
   //   fetchData();
 
-      //const timer = setTimeout(()=>{},3000);
+  //const timer = setTimeout(()=>{},3000);
 
+  // for unmounting phase
+  // return () => {
+  //   clearInterval(timer);
+  // }
 
-      // for unmounting phase 
-      // return () => {
-      //   clearInterval(timer);
-      // }
-   
   // },[]);
-
 
   // console.log('rednered comp')
   // if (todos.length === 0) {
   //   return <p>Loading....</p>; // use skelton instead of this ok
   // }
 
-  
   return (
     <>
-      <div
-        id="search"
-        onClick={() => {
-          setResList(restaurants.filter((res) => res.rating > rating));
-        }}
-      >
-        Top rated Restaurants
-      </div>
-
-      <div id="rating">
-        <select onChange={(e) => setRating(e.target.value)}>
-          {ratings.map((rating, idx) => (
-            <option key={idx}>{rating}</option>
-          ))}
-        </select>
-      </div>
-
-      <div id="searchByName">
-        <input
-          type="text"
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        />
-        <button
+      <div className="flex justify-center items-center ">
+        <div
+          className="bg-black-400"
+          id="search"
           onClick={() => {
-            const filteredRest = restaurants.filter((res) =>
-              res.name.toLowerCase().includes(searchText.toLowerCase())
-            );
-            setResList(filteredRest);
+            setResList(restaurants.filter((res) => res.rating > rating));
           }}
         >
-          Search Name
-        </button>
+          Top rated Restaurants
+        </div>
+
+        <div id="rating">
+          <select onChange={(e) => setRating(e.target.value)}>
+            {ratings.map((rating, idx) => (
+              <option key={idx}>{rating}</option>
+            ))}
+          </select>
+        </div>
+        <div id="searchByName" className="flex justify-between items-center m-5">
+          <input
+            className="border border-black-500"
+            type="text"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button
+             className="border border-black-500"
+            onClick={() => {
+              const filteredRest = restaurants.filter((res) =>
+                res.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setResList(filteredRest);
+            }}
+          >
+            Search Name
+          </button>
+        </div>
       </div>
+
       {/* <div className="todos">
         {todos.map((todo,idx) => (
           <p key={idx}>{todo.title}</p>
         ))}
       </div> */}
 
-      <div className="restaurants">
+      <div className="flex justify-between items-center flex-wrap">
         {resList.map((res, idx) => (
-          <Link to={`/restaurant/${idx}`} key={idx}><RestaurantDetails  res={res} /> </Link>
+          <Link to={`/restaurant/${idx}`} key={idx}>
+            <RestaurantDetails res={res} />{" "}
+          </Link>
         ))}
       </div>
     </>

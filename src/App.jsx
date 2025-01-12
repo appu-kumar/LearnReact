@@ -16,7 +16,10 @@ import {lazy,Suspense} from 'react'
 // chunking 
 // all are same ok
 // bundler will make different js file for this compoenent ok
+// when this compoent will be called then it will load, like clicking on the Grocery in Header comp.
 const Grocery = lazy(() => import("./components/Grocery"));   // if grocery is big componenet then do this thing
+
+
 
 
 const App = () => {
