@@ -3,7 +3,7 @@
 
 const RestaurantDetails = (props) => {
   const {res} = props;
-  const { image, name, rating, rate, description, deliveryTime } = res;
+  const { image, name, rating, rate, description, deliveryTime,promoted } = res;
  
   return (
     <div className="border border-black-500 p-5 m-5 bg-color-red">
@@ -13,6 +13,7 @@ const RestaurantDetails = (props) => {
       <h1>{rate}</h1>
       <p>{description}</p>
       <p>{deliveryTime}</p>
+      {/* <p>promoted:{promoted?"hi":"bye"}</p> */}
     </div>
   );
 };

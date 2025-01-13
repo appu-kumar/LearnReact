@@ -1,11 +1,13 @@
 
-import {useState} from 'react'
+import {useContext, useState} from 'react'
 import { Link } from 'react-router'
 import useOnlineStatus from '../utils/useOnlineStatus';
+import { UserContext } from '../utils/UserContext';
 const Header = () =>{
 
    const [btnLogin, setBtnLogin] = useState('Login')
    const isOnline = useOnlineStatus();
+   const UserData = useContext(UserContext);
     return (
         <>
           <div className="flex justify-between items-center bg-gray-200 h-[120px] shadow-xl">
@@ -18,6 +20,7 @@ const Header = () =>{
                         <li className="mx-10 cursor-pointer"><Link to='/Contact'>Contact</Link></li>
                         <li className="mx-10 cursor-pointer"><Link to='/Project'>Project</Link></li>
                         <li className="mx-10 cursor-pointer"><Link to="/grocery">Grocery</Link></li>
+                        <li>{UserData.username}</li>
                    </ul>
                </div>
           </div>

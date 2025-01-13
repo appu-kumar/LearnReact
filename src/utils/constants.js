@@ -7,6 +7,7 @@ export const restaurants = [
       "Authentic Indian cuisine with a modern twist, known for its rich flavors and vibrant spices.",
     image: "https://example.com/images/spicy-delight.jpg",
     deliveryTime: "30-40 mins",
+    promoted:true,
   },
   {
     name: "Urban Bistro",
@@ -16,6 +17,7 @@ export const restaurants = [
       "A trendy spot serving international fusion dishes crafted with locally sourced ingredients.",
     image: "https://example.com/images/urban-bistro.jpg",
     deliveryTime: "25-35 mins",
+    promoted:false,
   },
   {
     name: "Green Bowl",
@@ -25,6 +27,7 @@ export const restaurants = [
       "A vegan-friendly restaurant offering fresh salads, smoothie bowls, and plant-based meals.",
     image: "https://example.com/images/green-bowl.jpg",
     deliveryTime: "20-30 mins",
+    promoted:true,
   },
   {
     name: "Bella Pasta",
@@ -34,6 +37,7 @@ export const restaurants = [
       "Traditional Italian trattoria serving handmade pasta and wood-fired pizzas.",
     image: "https://example.com/images/bella-pasta.jpg",
     deliveryTime: "30-45 mins",
+    promoted:false,
   },
   {
     name: "Sushi Haven",
@@ -43,6 +47,7 @@ export const restaurants = [
       "Exquisite sushi and sashimi, prepared fresh by experienced chefs in a serene setting.",
     image: "https://example.com/images/sushi-haven.jpg",
     deliveryTime: "40-50 mins",
+    promoted:false,
   },
   {
     name: "Burger Factory",
@@ -52,6 +57,7 @@ export const restaurants = [
       "Gourmet burgers, crispy fries, and craft milkshakes served in a laid-back atmosphere.",
     image: "https://example.com/images/burger-factory.jpg",
     deliveryTime: "20-30 mins",
+    promoted:false,
   },
   {
     name: "Taco Fiesta",
@@ -61,6 +67,7 @@ export const restaurants = [
       "A casual eatery offering delicious tacos, burritos, and margaritas with a Mexican flair.",
     image: "https://example.com/images/taco-fiesta.jpg",
     deliveryTime: "15-25 mins",
+    promoted:false,
   },
   {
     name: "Steakhouse Prime",
@@ -70,6 +77,7 @@ export const restaurants = [
       "An upscale steakhouse known for its premium cuts, fine wines, and elegant ambiance.",
     image: "https://example.com/images/steakhouse-prime.jpg",
     deliveryTime: "45-55 mins",
+    promoted:false,
   },
   {
     name: "Pho Corner",
@@ -79,6 +87,7 @@ export const restaurants = [
       "Cozy Vietnamese restaurant specializing in aromatic pho and fresh spring rolls.",
     image: "https://example.com/images/pho-corner.jpg",
     deliveryTime: "20-30 mins",
+    promoted:false,
   },
   {
     name: "Dessert Bliss",
@@ -88,6 +97,7 @@ export const restaurants = [
       "Sweeten your day with our wide selection of cakes, pastries, and handcrafted desserts.",
     image: "https://example.com/images/dessert-bliss.jpg",
     deliveryTime: "25-35 mins",
+    promoted:false,
   },
   {
     name: "Dessert Bliss",
@@ -97,6 +107,7 @@ export const restaurants = [
       "Sweeten your day with our wide selection of cakes, pastries, and handcrafted desserts.",
     image: "https://example.com/images/dessert-bliss.jpg",
     deliveryTime: "25-35 mins",
+    promoted:true,
   },
 
   {
@@ -107,6 +118,7 @@ export const restaurants = [
       "Cozy Vietnamese restaurant specializing in aromatic pho and fresh spring rolls.",
     image: "https://example.com/images/pho-corner.jpg",
     deliveryTime: "20-30 mins",
+    promoted:false,
   },
 ];
 
