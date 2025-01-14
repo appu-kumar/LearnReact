@@ -46,7 +46,7 @@
 
 
 # Redux or Zustand (Both are Optional, Context API of react is enough for the small and mid-size application okay for large also )
-- Redux is state management Library 
-- 
+- Redux is state management Library.
+- Redux manages state globally.
 
 
