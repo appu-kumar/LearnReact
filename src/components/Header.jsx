@@ -3,6 +3,7 @@ import {useContext, useState} from 'react'
 import { Link } from 'react-router'
 import useOnlineStatus from '../utils/useOnlineStatus';
 import { UserContext } from '../utils/UserContext';
+import Test from './Test';
 const Header = () =>{
 
    const [btnLogin, setBtnLogin] = useState('Login')
@@ -24,6 +25,7 @@ const Header = () =>{
                    </ul>
                </div>
           </div>
+          <Test />
           <button onClick={()=>btnLogin === 'Login'?setBtnLogin('Logout'):setBtnLogin('Login')}>{btnLogin}</button>
         </>
     )
